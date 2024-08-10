@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+
+.page-developing{
+  margin:0px 150px 0px 150px
+}
+
+.carousel{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-inner {
+  display: flex; /* Выстраивает изображения в ряд */
+  transition: transform 0.3s ease; /* Плавный переход при изменении */
+}
+
+.carousel-inner img {
+  height: 150px; /* Устанавливает высоту изображений */
+  flex: 0 0 auto; /* Не позволяет изображениям растягиваться */
+  margin-right: 10px; /* Отступ между изображениями */
+}
+
+body{
+  font-family: "Bebas Neue", sans-serif;
+  font-style: normal;
+}
+
