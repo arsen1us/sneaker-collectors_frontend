@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('page-developing-state'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App/>
   </React.StrictMode>
 );
 
