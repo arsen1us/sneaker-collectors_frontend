@@ -12,7 +12,7 @@ const Header = () => {
         <BrowserRouter>
             <header>
                 <nav>
-                    <Link to='/'><img src="./icons/sneaker_collectors_logo.png" width='200px' alt=''/></Link>
+                    <Link to='/'><img src="./images/sneaker_collectors_logo.png" width='200px' alt=''/></Link>
                     <h2>Sneakers Collectors</h2>
                     <ul>
                         <li><Link to='/sneaker-news'>Sneaker NEWS</Link></li>
@@ -24,7 +24,7 @@ const Header = () => {
                 </nav>
                 <img src="./icons/heart.png" width='25px' alt=''/>
                 <button>Your Collection</button>
-                <img src='./icons/black_circle.png' width='25px' alt=''/>
+                <img src='./images/default_user_photo.png' width='25px' alt=''/>
                 <p>Arsenius</p>
                 <Routes>
                     <Route path='/' element={<MainPage/>}/>
