@@ -1,6 +1,6 @@
 import React from "react";
 
-const HipeModels = () => {
+function HipeModels() {
     return (
         <div>
             <h2>HIPE MODELS</h2>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
 import MainPage from '../pages/MainPage'
@@ -7,7 +7,17 @@ import AllSneakersPage from "../pages/AllSneakersPage";
 import SneakerNewsPage from "../pages/SneakerNewsPage";
 import TradesPage from "../pages/TradesPage";
 
-const Header = () => {
+import Popup from "./Popup";
+import RegistrationForm from "./RegistrationForm";
+
+function Header() {
+    
+    const[showPopup, setShowPopup] = useState(false);
+
+    function toggle(){
+        setShowPopup(!showPopup);
+    }
+
     return(
         <BrowserRouter>
             <header>
@@ -26,6 +36,10 @@ const Header = () => {
                 <button>Your Collection</button>
                 <img src='./images/default_user_photo.png' width='25px' alt=''/>
                 <p>Arsenius</p>
+                <button onClick={toggle}>Register</button>
+                <Popup show = {showPopup} handleClose={toggle}>
+                    <RegistrationForm handleClose={toggle}/>
+                </Popup>
                 <Routes>
                     <Route path='/' element={<MainPage/>}/>
                     <Route path='/sneaker-news' element={<SneakerNewsPage/>}/>
