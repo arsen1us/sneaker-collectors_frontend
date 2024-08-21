@@ -8,17 +8,19 @@ function RegistrationForm({handleClose}) {
 
     const register = async (e) => {
     e.preventDefault();
-    try{
-        const response = await axios.post("https://localhost:7190/api/user/reg", 
-            {Login: login, Email: email, Password: password});
-        if(response.status == 200)
-            handleClose();
-            alert(response.data)
+    
+    await axios.post("https://localhost:7190/api/user/reg", {
+        Login: login,
+        Email: email,
+        Password: password
+    })
+    .then(response => {
+        const authHeader = response.headers['authorization'];
+        const token = authHeader.split(' ')[1];
+        localStorage.setItem('jwt-token', token);
         
-    }
-    catch(error) {
-        alert(error.data)
-    }
+        alert(localStorage.getItem('jwt-token'));
+    }) 
 }
     return (
         <div>
