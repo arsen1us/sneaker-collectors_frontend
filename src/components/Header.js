@@ -30,35 +30,61 @@ function Header() {
     return(
         <BrowserRouter>
             <header>
-                <div>
+                <div class='header-container'>
                     <div>
-                        <Link to='/'><img src="./images/sneaker_collectors_logo.png" width='100px' alt=''/></Link>
+                        <div class='logo-and-title-container'>
+                            <div class='logo'>
+                                <Link to='/'><img src="./images/sneaker_collectors_logo.png" width='100px' alt=''/></Link>
+                            </div>
+                            <div class='title'>
+                                <h2>Sneakers<br/>Collectors</h2>
+                            </div>
+                        </div>
+                        <div class='header-menu-container'>
+                            <div>
+                                <Link to=''>
+                                    <img src="./icons/heart.png" width='25px' alt='profile'/>
+                                </Link>
+                            </div>
+                            <div>
+                                <Link to=''>
+                                    <p>Your Collection</p>
+                                </Link>
+                            </div>
+                            <div>
+                                <Link to=''>
+                                    <img src='./images/default_user_photo.png' width='25px' alt=''/>
+                                </Link>
+                            </div>
+                            <div>
+                                <Link to=''>
+                                    <p>Arsenius</p>
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                     <div>
-                        <h2>Sneakers<br/>Collectors</h2>
+                        <nav class='nav-menu'>
+                            <div>
+                                <Link to='/sneaker-news'>Sneaker NEWS</Link>
+                            </div>
+                            <div>
+                                <Link to='/all-sneakers'>All Sneakers</Link>
+                            </div>
+                            <div>
+                                <Link to='/auction'>Auction</Link>
+                            </div>
+                            <div>
+                                <Link to='/trades'>Trades</Link>
+                            </div>
+                            <div>
+                                <input 
+                                type='text'
+                                placeholder="Search sneakers"/>
+                            </div>
+                        </nav>
                     </div>
                 </div>
-                    <nav class='nav-menu'>
-                    <div>
-                        <Link to='/sneaker-news'>Sneaker NEWS</Link>
-                    </div>
-                    <div>
-                        <Link to='/all-sneakers'>All Sneakers</Link>
-                    </div>
-                    <div>
-                        <Link to='/auction'>Auction</Link>
-                    </div>
-                    <div>
-                        <Link to='/trades'>Trades</Link>
-                    </div>
-                    <div>
-                        <button>Search</button>
-                    </div>
-                </nav>
-                <img src="./icons/heart.png" width='25px' alt=''/>
-                <button>Your Collection</button>
-                <img src='./images/default_user_photo.png' width='25px' alt=''/>
-                <p>Arsenius</p>
 
                 <button onClick={toggleRegPopup}>Sign in</button>
                 <Popup show = {showRegPopup} handleClose={toggleRegPopup}>
