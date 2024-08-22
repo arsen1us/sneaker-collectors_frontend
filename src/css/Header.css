@@ -1,0 +1,11 @@
+.nav-menu {
+    display: grid;              /* Включаем Grid */
+    grid-template-columns: repeat(8, 200px); /* Создаём три колонки */
+    align-items: center;        /* Выравниваем элементы по вертикали */
+    padding: 0px 0px;         /* Добавляем отступы */
+    background-color: #f8f9fa;  /* Цвет фона */
+}
+
+.nav-menu > div{
+    text-align: center;
+}

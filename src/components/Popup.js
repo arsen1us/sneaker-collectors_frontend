@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import '../Popup.css'
+import '../css/Popup.css'
 
 function Popup({ show, handleClose, children }) {
 

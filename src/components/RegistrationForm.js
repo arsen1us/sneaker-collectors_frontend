@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import axios, {preventDefault} from "axios";
-import '../Popup.css';
+import '../css/Popup.css';
 
 function RegistrationForm({handleClose}) {
     const [login, setLogin] = useState('');
@@ -121,6 +121,9 @@ function RegistrationForm({handleClose}) {
             </form>
             <div>
                 <img class='reg-image' src="/images/pureSport.jpg"/>
+            </div>
+            <div>
+
             </div>
         </div>
     );

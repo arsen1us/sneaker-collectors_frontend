@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 import axios, {preventDefault} from "axios";
-import '../Popup.css';
+import '../css/Popup.css';
 
 function AuthenticationForm({handleClose}) {
     const [loginOrEmail, setLoginOrEmail] = useState('');
