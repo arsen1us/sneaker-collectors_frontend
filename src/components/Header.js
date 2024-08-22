@@ -9,14 +9,21 @@ import TradesPage from "../pages/TradesPage";
 
 import Popup from "./Popup";
 import RegistrationForm from "./RegistrationForm";
+import AuthenticationForm from "./AuthenticationForm";
 
 function Header() {
     
-    const[showPopup, setShowPopup] = useState(false);
+    const[showRegPopup, setShowRegPopup] = useState(false);
+    const[showAuthPopup, setShowAuthPoput] = useState(false);
 
-    function toggle(){
-        setShowPopup(!showPopup);
+    function toggleRegPopup(){
+        setShowRegPopup(!showRegPopup);
     }
+
+    function toggleAuthPopup(){
+        setShowAuthPoput(!showAuthPopup);
+    }
+
 
     return(
         <BrowserRouter>
@@ -36,9 +43,15 @@ function Header() {
                 <button>Your Collection</button>
                 <img src='./images/default_user_photo.png' width='25px' alt=''/>
                 <p>Arsenius</p>
-                <button onClick={toggle}>Register</button>
-                <Popup show = {showPopup} handleClose={toggle}>
-                    <RegistrationForm handleClose={toggle}/>
+                
+                <button onClick={toggleRegPopup}>Sign in</button>
+                <Popup show = {showRegPopup} handleClose={toggleRegPopup}>
+                    <RegistrationForm handleClose={toggleRegPopup}/>
+                </Popup>
+
+                <button onClick={toggleAuthPopup}>Sign on</button>
+                <Popup show = {showAuthPopup} handleClose={toggleAuthPopup}>
+                    <AuthenticationForm handleClose={toggleAuthPopup}/>
                 </Popup>
                 <Routes>
                     <Route path='/' element={<MainPage/>}/>
