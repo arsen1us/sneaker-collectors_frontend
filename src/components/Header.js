@@ -96,7 +96,7 @@ function Header() {
                     <AuthenticationForm handleClose={toggleAuthPopup}/>
                 </Popup>
                 <Routes>
-                    <Route path='/' element={<MainPage/>}/>
+                    <Route path='' element={<MainPage/>}/>
                     <Route path='/sneaker-news' element={<SneakerNewsPage/>}/>
                     <Route path='/all-sneakers' element={<AllSneakersPage/>}/>
                     <Route path='/auction' element={<AuctionPage/>}/>
