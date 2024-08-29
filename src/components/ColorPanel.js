@@ -55,6 +55,24 @@ const ColorPanel = () => {
     return(
         <div>
             <div>
+                <h3>Add new color</h3>
+                <form>
+                    <div>
+                        <label>
+                            New color
+                        </label>
+                        <input 
+                        type="text"
+                        value={newColor}
+                        onChange={(e) => setNewColor(e.target.value)}
+                        placeholder="New color"/>
+                    </div>
+                    <button onClick={addNewColor}>
+                        Добавить
+                    </button>
+                </form>
+            </div>
+            <div>
                 <h3>All colors</h3>
                 {allColors.map((item, index) => (
                     <li key={index}>
@@ -81,24 +99,6 @@ const ColorPanel = () => {
                         </div>
                     </li>
                 ))}
-            </div>
-            <div>
-                <h3>Add new color</h3>
-                <form>
-                    <div>
-                        <label>
-                            New color
-                        </label>
-                        <input 
-                        type="text"
-                        value={newColor}
-                        onChange={(e) => setNewColor(e.target.value)}
-                        placeholder="New color"/>
-                    </div>
-                    <button onClick={addNewColor}>
-                        Добавить
-                    </button>
-                </form>
             </div>
         </div>
     )

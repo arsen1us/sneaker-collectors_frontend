@@ -8,6 +8,7 @@ import AuctionPage from "../pages/AuctionPage";
 import AllSneakersPage from "../pages/AllSneakersPage";
 import SneakerNewsPage from "../pages/SneakerNewsPage";
 import TradesPage from "../pages/TradesPage";
+import AdminPage from "../pages/AdminPage";
 
 import Popup from "./Popup";
 import RegistrationForm from "./RegistrationForm";
@@ -78,6 +79,9 @@ function Header() {
                                 <Link to='/trades'>Trades</Link>
                             </div>
                             <div>
+                                <Link to='/admin'>Admin Panel</Link>
+                            </div>
+                            <div>
                                 <input 
                                 type='text'
                                 placeholder="Search sneakers"/>
@@ -101,6 +105,7 @@ function Header() {
                     <Route path='/all-sneakers' element={<AllSneakersPage/>}/>
                     <Route path='/auction' element={<AuctionPage/>}/>
                     <Route path='/trades' element={<TradesPage/>}/>
+                    <Route path='/admin' element={<AdminPage/>}/>
                 </Routes>
             </header>
         </BrowserRouter>
