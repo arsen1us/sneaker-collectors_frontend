@@ -3,6 +3,7 @@ import axios, {preventDefault} from "axios";
 import { Route, Link, BrowserRouter  } from "react-router-dom";
 
 import ColorPanel from "../components/ColorPanel";
+import TechnologyPanel from "../components/TechnologyPanel";
 
 function AdminPage(){
     return(
@@ -18,6 +19,7 @@ function AdminPage(){
                 <Link to='/admin/tech-panel'>
                     <p>Technologies</p>
                 </Link>
+                <TechnologyPanel/>
             </div>
         </div>
         
